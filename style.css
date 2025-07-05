@@ -1,0 +1,47 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: rgb(238, 236, 236);
+
+}
+.calucalator{
+
+ border: 1px solid rgba(0, 0, 0, 0.416);
+ width: 17rem;
+ height: 25rem;
+ border-radius: 10px;
+ margin: 5rem  auto;
+ 
+}
+.buttons{
+  margin: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 16rem;
+}
+button{
+  width: 3rem;
+  height: 3rem;
+ border-radius:15px;
+ border: none;
+ background:white;
+ font-size:medium;
+
+}
+.color{
+ color:darkorange;
+}
+.color{
+  background-color:darkorange;
+  color: white;
+}
+#display{
+  border: none;
+  width:13.5rem ;
+  height: 4rem;
+    background-color: rgb(238, 236, 236);
+}
