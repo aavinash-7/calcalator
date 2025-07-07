@@ -42,7 +42,7 @@ function addItem() {
 
 let codetime = 5 ;
 let phone = (codetime >=6)?"yes":"no";
-console.log(phone);  */
+console.log(phone);  
 
     
 const display = document.getElementById("display");
@@ -63,3 +63,115 @@ const display = document.getElementById("display");
       display.value= display.value.slice(0,-1);
     }
     
+      
+
+
+let display = document.getElementById("display");  
+let firstvalue = "";  
+let secondvalue = ""; 
+let operator = "";     
+
+function appendToDisplay(input) {
+  firstvalue += input;          
+  display.value = firstvalue;  
+}
+  
+
+function setop(op) {
+  operator = op;
+  secondvalue = firstvalue;
+  firstvalue = "";
+  display.value = secondvalue + op;
+}
+
+
+function cal() {
+  let num1 = parseFloat(secondvalue);
+  let num2 = parseFloat(firstvalue);
+
+  if (operator === "+") {
+    display.value = num1 + num2;
+  } else if (operator === "-") {
+    display.value = num1 - num2;
+  } else if (operator === "*") {
+    display.value = num1 * num2;
+  } else if (operator === "/") {
+    display.value = num1 / num2;
+  }
+}
+
+function ac() {
+  firstvalue = "";
+  secondvalue = "";
+  operator = "";
+  display.value = "";
+}
+*/
+
+let display = document.getElementById("display");  
+let firstvalue = "";  
+let operator = "";
+let secondvalue = "";
+
+function appendToDisplay(input){
+ firstvalue += input;
+ display.value += input; 
+}
+
+function operatorr(input){
+  operator = input;
+  secondvalue = firstvalue;
+  firstvalue = "";
+  display.value += input;
+}
+
+
+function cal(){
+  let num1 = Number(secondvalue); 
+  let num2 = Number(firstvalue);
+
+  let result = 0;
+ 
+  if(operator == "+"){
+    result = num1+num2;
+  }else if(operator == "-"){
+    result = num1-num2;
+  } else if(operator == "*"){
+    result = num1*num2;
+  }else if(operator == "/"){
+    result =num1/num2;
+  }
+
+  display.value = result;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
